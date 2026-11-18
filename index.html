@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hardik | Python Developer Portfolio</title>
+  <meta name="description"
+    content="Portfolio of Hardik, a Python developer skilled in OOP, MySQL, HTML, CSS, Bootstrap, JavaScript and Git.">
+  <meta name="theme-color" content="#0c1424">
+
+  <!-- Set theme before paint to avoid a flash -->
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem("theme"); } catch (e) {}
+      if (!t) t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", t);
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar navbar-expand-lg sticky-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="#home">hardik<span>.py</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+        aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
+          <li class="nav-item"><a class="nav-link" href="#github">GitHub</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+            <button id="themeToggle" class="btn-theme" type="button" aria-label="Switch to light theme">
+              <i class="bi bi-sun-fill"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <header id="home" class="hero">
+      <div class="container">
+        <div class="row align-items-center g-4 g-lg-5">
+          <div class="col-lg-7">
+            <p class="status"><span class="status-dot" aria-hidden="true"></span>Open to work in Gujarat, India, or remote</p>
+            <h1 class="hero-title">Python developer who writes readable code and designs databases that hold up.</h1>
+            <p class="hero-lead">
+              I'm Hardik. I build applications with object-oriented Python and MySQL, and I make
+              the front end responsive with HTML, CSS, Bootstrap and JavaScript.
+            </p>
+            <div class="d-flex flex-wrap gap-3 mb-4">
+              <a href="#projects" class="btn-main"><i class="bi bi-grid-1x2"></i>See my projects</a>
+              <a href="#contact" class="btn-ghost"><i class="bi bi-envelope"></i>Hire me</a>
+            </div>
+            <div class="social">
+              <a href="https://github.com/yourusername" target="_blank" rel="noopener" aria-label="GitHub"><i
+                  class="bi bi-github"></i></a>
+              <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener" aria-label="LinkedIn"><i
+                  class="bi bi-linkedin"></i></a>
+              <a href="mailto:you@example.com" aria-label="Email"><i class="bi bi-envelope-fill"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <!-- Python REPL: types itself once on page load (see script.js) -->
+            <div class="repl" aria-label="Python session introducing Hardik">
+              <div class="repl-bar"><span></span><span></span><span></span><b>Python 3.12</b></div>
+              <div class="repl-body" id="repl">
+                <div class="repl-line in"><span class="p">&gt;&gt;&gt;</span> <span class="code">from hardik import profile</span></div>
+                <div class="repl-line in"><span class="p">&gt;&gt;&gt;</span> <span class="code">profile.stack</span></div>
+                <div class="repl-line out">['Python', 'MySQL', 'JavaScript',<br>&nbsp;'Bootstrap', 'Git']</div>
+                <div class="repl-line in"><span class="p">&gt;&gt;&gt;</span> <span class="code">profile.open_to_work</span></div>
+                <div class="repl-line out">True</div>
+                <div class="repl-line in"><span class="p">&gt;&gt;&gt;</span> <span class="code">profile.build("your idea")</span></div>
+                <div class="repl-line out">'your idea, shipped.'</div>
+                <div class="repl-line end"><span class="p">&gt;&gt;&gt;</span> <span class="repl-cursor"></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="split">
+          <div class="sec-head">
+            <h2>About</h2>
+            <p>Who I am and how I like to work.</p>
+          </div>
+          <div>
+            <div class="about-grid">
+              <!-- Replace the monogram with your photo: <img src="me.jpg" alt="Hardik"> -->
+              <div class="monogram" aria-hidden="true">H</div>
+              <div>
+                <h3 class="about-lead">I turn ideas into working products, one clean commit at a time.</h3>
+                <p>
+                  I focus on writing readable, object-oriented Python and pairing it with well-designed
+                  MySQL databases. On the front end I use HTML, CSS, Bootstrap and JavaScript to build
+                  fast, responsive and accessible interfaces. I use Git and GitHub daily for version
+                  control and collaboration.
+                </p>
+              </div>
+            </div>
+
+            <dl class="facts">
+              <div><dt>Focus</dt><dd>Python backend and database-driven apps</dd></div>
+              <div><dt>Based in</dt><dd>Gujarat, India</dd></div>
+              <div><dt>Languages</dt><dd>English, Hindi, Gujarati</dd></div>
+            </dl>
+
+            <div class="stats">
+              <div><strong class="counter" data-target="10">0</strong><span>projects built</span></div>
+              <div><strong class="counter" data-target="2">0</strong><span>years learning</span></div>
+              <div><strong class="counter" data-target="100">0</strong><span>commits pushed</span></div>
+            </div>
+
+            <a href="#resume" class="btn-main mt-4"><i class="bi bi-file-earmark-person"></i>View resume</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section id="skills" class="section section-alt">
+      <div class="container">
+        <div class="split">
+          <div class="sec-head">
+            <h2>Skills</h2>
+            <p>Tools I use most. Filled squares show how comfortable I am, out of five.</p>
+          </div>
+          <div>
+            <h3 class="group-title">Backend and data</h3>
+            <ul class="skill-list">
+              <li>
+                <span class="s-name"><i class="bi bi-filetype-py"></i>Python</span>
+                <span class="s-note">Scripts, CLI tools, API calls, full applications</span>
+                <span class="pips" role="img" aria-label="5 out of 5"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span>
+              </li>
+              <li>
+                <span class="s-name"><i class="bi bi-diagram-3"></i>Python OOP</span>
+                <span class="s-note">Classes, inheritance, encapsulation</span>
+                <span class="pips" role="img" aria-label="4 out of 5"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span>
+              </li>
+              <li>
+                <span class="s-name"><i class="bi bi-database"></i>MySQL</span>
+                <span class="s-note">Schema design, joins, indexes, views</span>
+                <span class="pips" role="img" aria-label="4 out of 5"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span>
+              </li>
+              <li>
+                <span class="s-name"><i class="bi bi-github"></i>Git and GitHub</span>
+                <span class="s-note">Branches, pull requests, code review</span>
+                <span class="pips" role="img" aria-label="4 out of 5"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span>
+              </li>
+            </ul>
+
+            <h3 class="group-title">Front end</h3>
+            <ul class="skill-list">
+              <li>
+                <span class="s-name"><i class="bi bi-filetype-html"></i>HTML5</span>
+                <span class="s-note">Semantic, accessible markup</span>
+                <span class="pips" role="img" aria-label="5 out of 5"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span>
+              </li>
+              <li>
+                <span class="s-name"><i class="bi bi-filetype-css"></i>CSS3</span>
+                <span class="s-note">Flexbox, grid, responsive layouts</span>
+                <span class="pips" role="img" aria-label="4 out of 5"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span>
+              </li>
+              <li>
+                <span class="s-name"><i class="bi bi-bootstrap"></i>Bootstrap</span>
+                <span class="s-note">Bootstrap 5 grid, components, theming</span>
+                <span class="pips" role="img" aria-label="4 out of 5"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span>
+              </li>
+              <li>
+                <span class="s-name"><i class="bi bi-filetype-js"></i>JavaScript</span>
+                <span class="s-note">DOM, forms, localStorage</span>
+                <span class="pips" role="img" aria-label="3 out of 5"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="split">
+          <div class="sec-head">
+            <h2>Projects</h2>
+            <p>Things I've built to practise real problems: data, logic and interfaces.</p>
+          </div>
+          <div>
+            <div class="filters" role="group" aria-label="Filter projects">
+              <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+              <button class="filter-btn" data-filter="python" aria-pressed="false">Python</button>
+              <button class="filter-btn" data-filter="web" aria-pressed="false">Web</button>
+              <button class="filter-btn" data-filter="database" aria-pressed="false">Database</button>
+            </div>
+
+            <div class="projects" id="projectGrid">
+
+              <!-- Featured -->
+              <article class="project project-item featured" data-category="python database">
+                <div class="featured-text">
+                  <span class="badge-feat">Featured</span>
+                  <h3>Student Management System</h3>
+                  <p>OOP-based Python app with MySQL for adding, searching, updating and deleting student records.</p>
+                  <p class="stack">Python, OOP, MySQL</p>
+                  <div class="p-links">
+                    <a href="#"><i class="bi bi-github"></i>Code</a>
+                    <a href="#"><i class="bi bi-box-arrow-up-right"></i>Demo</a>
+                  </div>
+                </div>
+                <div class="sql" aria-hidden="true">
+                  <div class="sql-q"><span class="k">SELECT</span> id, name, course <span class="k">FROM</span> students<br><span class="k">WHERE</span> course = <span class="s">'BCA'</span>;</div>
+                  <table>
+                    <thead><tr><th>id</th><th>name</th><th>course</th></tr></thead>
+                    <tbody>
+                      <tr><td>101</td><td>Aarav Shah</td><td>BCA</td></tr>
+                      <tr><td>102</td><td>Diya Patel</td><td>BCA</td></tr>
+                      <tr><td>107</td><td>Kunal Mehta</td><td>BCA</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </article>
+
+              <article class="project project-item" data-category="web">
+                <div class="p-icon"><i class="bi bi-cart4"></i></div>
+                <h3>E-Commerce Landing Page</h3>
+                <p>Fully responsive store front with Bootstrap grid, product filters and a JavaScript shopping cart.</p>
+                <p class="stack">HTML, CSS, Bootstrap, JavaScript</p>
+                <div class="p-links">
+                  <a href="#"><i class="bi bi-github"></i>Code</a>
+                  <a href="#"><i class="bi bi-box-arrow-up-right"></i>Demo</a>
+                </div>
+              </article>
+
+              <article class="project project-item" data-category="python database">
+                <div class="p-icon"><i class="bi bi-bank"></i></div>
+                <h3>Banking Console App</h3>
+                <p>Python OOP project with Account classes, inheritance, transactions and persistent MySQL storage.</p>
+                <p class="stack">Python, OOP, MySQL</p>
+                <div class="p-links">
+                  <a href="#"><i class="bi bi-github"></i>Code</a>
+                  <a href="#"><i class="bi bi-box-arrow-up-right"></i>Demo</a>
+                </div>
+              </article>
+
+              <article class="project project-item" data-category="web">
+                <div class="p-icon"><i class="bi bi-check2-square"></i></div>
+                <h3>To-Do Task Manager</h3>
+                <p>Interactive task app with add, complete and delete features, saved in the browser with localStorage.</p>
+                <p class="stack">HTML, CSS, JavaScript</p>
+                <div class="p-links">
+                  <a href="#"><i class="bi bi-github"></i>Code</a>
+                  <a href="#"><i class="bi bi-box-arrow-up-right"></i>Demo</a>
+                </div>
+              </article>
+
+              <article class="project project-item" data-category="python">
+                <div class="p-icon"><i class="bi bi-cloud-sun"></i></div>
+                <h3>Weather CLI Tool</h3>
+                <p>Command-line Python tool that fetches live weather from a REST API and formats the output.</p>
+                <p class="stack">Python, REST API, Git</p>
+                <div class="p-links">
+                  <a href="#"><i class="bi bi-github"></i>Code</a>
+                  <a href="#"><i class="bi bi-box-arrow-up-right"></i>Demo</a>
+                </div>
+              </article>
+
+              <article class="project project-item" data-category="database">
+                <div class="p-icon"><i class="bi bi-diagram-2"></i></div>
+                <h3>Library Database Design</h3>
+                <p>Normalized MySQL schema with joins, indexes, views and stored procedures for a library system.</p>
+                <p class="stack">MySQL, SQL, ER design</p>
+                <div class="p-links">
+                  <a href="#"><i class="bi bi-github"></i>Code</a>
+                  <a href="#"><i class="bi bi-box-arrow-up-right"></i>Demo</a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RESUME ============ -->
+    <section id="resume" class="section section-alt">
+      <div class="container">
+        <div class="split">
+          <div class="sec-head no-print">
+            <h2>Resume</h2>
+            <p>One page you can save as a PDF and send to a recruiter.</p>
+            <button type="button" id="printResume" class="btn-main mt-3">
+              <i class="bi bi-download"></i>Download PDF
+            </button>
+          </div>
+
+          <div class="resume-paper" id="resumePaper">
+            <div class="resume-head">
+              <div>
+                <h3 class="resume-name">Hardik</h3>
+                <p class="resume-role">Python Developer</p>
+              </div>
+              <ul class="resume-contact list-unstyled mb-0">
+                <li><i class="bi bi-envelope-fill"></i> you@example.com</li>
+                <li><i class="bi bi-telephone-fill"></i> +91 00000 00000</li>
+                <li><i class="bi bi-geo-alt-fill"></i> Gujarat, India</li>
+                <li><i class="bi bi-github"></i> github.com/yourusername</li>
+                <li><i class="bi bi-linkedin"></i> linkedin.com/in/yourusername</li>
+              </ul>
+            </div>
+
+            <div class="resume-block">
+              <h4>Professional summary</h4>
+              <p>
+                Motivated Python developer with strong knowledge of Object-Oriented Programming,
+                MySQL database design, and front-end development using HTML, CSS, Bootstrap and
+                JavaScript. Experienced in building responsive websites and database-driven
+                applications, and comfortable with Git and GitHub for version control. Looking for
+                an opportunity to grow as a software developer and contribute to real-world projects.
+              </p>
+            </div>
+
+            <div class="row g-4">
+              <div class="col-md-8">
+                <div class="resume-block">
+                  <h4>Experience</h4>
+                  <div class="entry">
+                    <div class="entry-top"><h5>Python Developer Intern</h5><span class="date">Jan 2026 – Present</span></div>
+                    <p class="company">Company Name, City</p>
+                    <ul>
+                      <li>Developed Python applications using OOP concepts and clean, reusable code.</li>
+                      <li>Designed and optimized MySQL tables, queries and joins.</li>
+                      <li>Built responsive web pages with HTML, CSS, Bootstrap and JavaScript.</li>
+                      <li>Managed code using Git branches and GitHub pull requests.</li>
+                    </ul>
+                  </div>
+                  <div class="entry">
+                    <div class="entry-top"><h5>Freelance Web Developer</h5><span class="date">2025 – 2026</span></div>
+                    <p class="company">Self-employed</p>
+                    <ul>
+                      <li>Created portfolio and business websites for small clients.</li>
+                      <li>Delivered mobile-friendly designs using Bootstrap 5.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="resume-block">
+                  <h4>Projects</h4>
+                  <div class="entry">
+                    <div class="entry-top"><h5>Student Management System</h5></div>
+                    <p class="company">Python, OOP, MySQL</p>
+                    <ul><li>CRUD application to add, search, update and delete student records stored in MySQL.</li></ul>
+                  </div>
+                  <div class="entry">
+                    <div class="entry-top"><h5>Banking Console App</h5></div>
+                    <p class="company">Python, OOP, MySQL</p>
+                    <ul><li>Used classes, inheritance and encapsulation for accounts and transactions with persistent storage.</li></ul>
+                  </div>
+                  <div class="entry">
+                    <div class="entry-top"><h5>E-Commerce Landing Page</h5></div>
+                    <p class="company">HTML, CSS, Bootstrap, JavaScript</p>
+                    <ul><li>Responsive store front with product filters and a JavaScript shopping cart.</li></ul>
+                  </div>
+                </div>
+
+                <div class="resume-block mb-0">
+                  <h4>Education</h4>
+                  <div class="entry">
+                    <div class="entry-top"><h5>B.Tech / BCA / B.Sc (IT)</h5><span class="date">2023 – 2026</span></div>
+                    <p class="company">Your University / College Name</p>
+                  </div>
+                  <div class="entry mb-0">
+                    <div class="entry-top"><h5>Higher Secondary (12th)</h5><span class="date">2023</span></div>
+                    <p class="company">Your School Name</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="resume-block">
+                  <h4>Skills</h4>
+                  <div class="chips">
+                    <span>Python</span><span>Python OOP</span><span>MySQL</span>
+                    <span>HTML5</span><span>CSS3</span><span>Bootstrap</span>
+                    <span>JavaScript</span><span>Git</span><span>GitHub</span>
+                  </div>
+                </div>
+                <div class="resume-block">
+                  <h4>Certifications</h4>
+                  <ul class="plain-list">
+                    <li>Python Programming Certificate</li>
+                    <li>MySQL Database Course</li>
+                    <li>Web Development (HTML, CSS, JS)</li>
+                  </ul>
+                </div>
+                <div class="resume-block">
+                  <h4>Languages</h4>
+                  <ul class="plain-list">
+                    <li>English</li>
+                    <li>Hindi</li>
+                    <li>Gujarati</li>
+                  </ul>
+                </div>
+                <div class="resume-block mb-0">
+                  <h4>Interests</h4>
+                  <ul class="plain-list">
+                    <li>Problem solving and coding practice</li>
+                    <li>Open-source contribution</li>
+                    <li>Learning new technologies</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GITHUB ============ -->
+    <section id="github" class="section">
+      <div class="container">
+        <div class="split">
+          <div class="sec-head">
+            <h2>GitHub</h2>
+            <p>Where the code lives.</p>
+          </div>
+          <div class="git-banner">
+            <i class="bi bi-github"></i>
+            <div class="git-text">
+              <h3>@yourusername</h3>
+              <p>I commit regularly, use branches and pull requests, and keep every project under version control.</p>
+              <div class="git-meta">
+                <span><i class="bi bi-journal-code"></i>20+ repositories</span>
+                <span><i class="bi bi-diagram-3"></i>Branch and PR workflow</span>
+              </div>
+            </div>
+            <a href="https://github.com/yourusername" target="_blank" rel="noopener" class="btn-main">Open GitHub<i
+                class="bi bi-box-arrow-up-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="section section-alt">
+      <div class="container">
+        <div class="split">
+          <div class="sec-head">
+            <h2>Contact</h2>
+            <p>Have a role or a project in mind? Send a message and I'll reply within a day.</p>
+            <ul class="contact-list">
+              <li><i class="bi bi-envelope-fill"></i><a href="mailto:you@example.com">you@example.com</a></li>
+              <li><i class="bi bi-telephone-fill"></i><a href="tel:+910000000000">+91 00000 00000</a></li>
+              <li><i class="bi bi-geo-alt-fill"></i>Gujarat, India</li>
+            </ul>
+          </div>
+          <form id="contactForm" class="contact-form" novalidate>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label" for="name">Your name</label>
+                <input type="text" class="form-control" id="name" autocomplete="name" required minlength="2">
+                <div class="invalid-feedback">Enter your name (at least 2 characters).</div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="email">Your email</label>
+                <input type="email" class="form-control" id="email" autocomplete="email" required>
+                <div class="invalid-feedback">Enter a valid email address.</div>
+              </div>
+              <div class="col-12">
+                <label class="form-label" for="message">Message</label>
+                <textarea class="form-control" id="message" rows="5" placeholder="Tell me about the role or project..."
+                  required minlength="10"></textarea>
+                <div class="invalid-feedback">Write at least 10 characters.</div>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn-main w-100 justify-content-center"><i class="bi bi-send"></i>Send message</button>
+              </div>
+              <div class="col-12">
+                <div id="formAlert" class="form-note d-none" role="status">Your email app should open with the message ready to send. If it didn't, write to <a href="mailto:you@example.com">you@example.com</a>.</div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center gap-3">
+      <p class="mb-0">&copy; <span id="year"></span> Hardik. Built with HTML, CSS, Bootstrap and JavaScript.</p>
+      <div class="social">
+        <a href="https://github.com/yourusername" target="_blank" rel="noopener" aria-label="GitHub"><i
+            class="bi bi-github"></i></a>
+        <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener" aria-label="LinkedIn"><i
+            class="bi bi-linkedin"></i></a>
+        <a href="mailto:you@example.com" aria-label="Email"><i class="bi bi-envelope-fill"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <button id="toTop" class="to-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
